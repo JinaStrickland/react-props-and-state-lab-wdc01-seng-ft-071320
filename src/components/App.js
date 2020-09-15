@@ -1,5 +1,4 @@
 import React from 'react'
-
 import Filters from './Filters'
 import PetBrowser from './PetBrowser'
 
@@ -15,6 +14,20 @@ class App extends React.Component {
     }
   }
 
+  onChangeType = (e) => {
+    let type = e.target.value
+    
+    this.setState({
+      filters: {...this.state.filters, type: type}
+    })
+
+    console.log("This is onChangeType")
+  }
+
+  onFindPetsClick = () => {
+    console.log("This is onFindPetsClickonFindPetsClick")
+  }
+
   render() {
     return (
       <div className="ui container">
@@ -24,7 +37,8 @@ class App extends React.Component {
         <div className="ui container">
           <div className="ui grid">
             <div className="four wide column">
-              <Filters />
+              <Filters onChangeType={this.onChangeType} 
+                       onFindPetsClick={this.onFindPetsClick} />
             </div>
             <div className="twelve wide column">
               <PetBrowser />

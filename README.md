@@ -1,6 +1,6 @@
 # React Props and State Lab
 
-## Overview
+## Overview 
 
 You'll build a small React application where you'll update state in response to
 a fetch payload and pass props among components to handle updates.
@@ -46,11 +46,11 @@ descendants:
 
 ### `App`
 
-1.  The app's initial state is already defined. App has two children: the
-    `<Filters />` and `<PetBrowser />` components.
+<!-- 1.  The app's initial state is already defined. App has two children: the
+    `<Filters />` and `<PetBrowser />` components. -->
 
-2. App should pass a **callback** prop, `onChangeType`, to `<Filters />`. This
-   callback needs to update `<App />`'s `state.filters.type`
+<!-- 2. App should pass a **callback** prop, `onChangeType`, to `<Filters />`. This
+   callback needs to update `<App />`'s `state.filters.type` -->
 
 3. `<Filters />` needs a **callback** prop, `onFindPetsClick`. When the
    `<Filters />` component calls `onFindPetsClick`, `<App />` should fetch a
